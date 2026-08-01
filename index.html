@@ -5,39 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Le Carnet Gourmand</title>
 </head>
-
     <!--liaison mise en forme-->
     <link rel="stylesheet" href="assets/css/style.css">
-
 <body>
     <header>
         <h1>Le Carnet Gourmand</h1>
     </header>
     <main class="container">
         <section class="recipe">
-                <div class="recipe-title">
-                    <h1>Pâtes crèmeuse au citron</h1>
-                    <p>Laisser votre avis sur cette rectte grâce au formulaire.</p>
-                </div>
-                <div class="recipe-box">
-                    <h1>Ingrédients</h1>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                    <h1>Préparation</h1>
-                    <ol>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ol>
-                </div>
+            <div class="recipe-title">
+                <h1>Pâtes crèmeuse au citron</h1>
+                <p>Laisser votre avis sur cette rectte grâce au formulaire.</p>
+            </div>
+            <div class="recipe-box">
+                <h1>Ingrédients</h1>
+                <ul>
+                    <li>Pâtes</li>
+                    <li>Crème</li>
+                    <li>Citron</li>
+                    <li>Parmesan</li>
+                </ul>
+                <h1>Préparation</h1>
+                <ol>
+                    <li>Cuire les pâtes.</li>
+                    <li>Mélanger la crème et le citron.</li>
+                    <li>Ajouter le parmesan.</li>
+                </ol>
+            </div>
         </section>
-
         <section class="comment">
-
+            <h1>Laisser un commentaire</h1>
+            <form id="commentform">
+                <h2>Votre Nom</h2>
+                <input type="text" id="nom" placeholder="Ex: Léa">
+                <h2>Votre commentaire</h2>
+                <textarea id="commentzone" placeholder="Votre avis sur la recette..."></textarea>
+                <button type="submit">Publier</button>
+            </form>
+            <p id="error"></p>
+            <div id="commentlist">
+                <h1>commentaires</h1>
+            </div>
         </section>
     </main>
     <footer>
@@ -46,5 +54,4 @@
     <!--liaison interactivité-->
     <script src="assets/js/script.js"></script>
 </body>
-
 </html>
