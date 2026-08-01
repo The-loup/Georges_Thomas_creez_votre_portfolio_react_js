@@ -14,3 +14,34 @@ header{
     text-align: center;
     padding: 30px;
 }
+
+.container{
+    max-width: 1050px;
+    margin: auto;
+    padding: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.recipe,
+.comment{
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 16px;
+}
+
+.recipe-box{
+    margin-top: 15px;
+    background: #fafafa;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 14px;
+}
+
+.recipe-box h1{
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #111827;
+}
