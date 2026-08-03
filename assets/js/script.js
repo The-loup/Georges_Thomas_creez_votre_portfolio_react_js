@@ -12,5 +12,46 @@ formulaire.addEventListener("submit", function (event) {
 
     erreur.textContent = "";
 
-    
+    //validation du nom
+    if (nom.ariaValueMax.trim().length < 2) {
+        erreur.textContent = "Le nom doit contenir au moins 2 caractères.";
+        return;
+    }
+
+    //validation du commentaire
+    if (commentaire.ariaValueMax.trim().length < 10) {
+        erreur.textContent = "Le commentaire doit contenir au moins 10 caratères.";
+        return;
+    }
+
+    //création de la carte commentaire
+    const carte = document.createElement("div");
+    carte.classlist.add("commentaire");
+
+    //nom de l'auteur
+    const auteur = document.createElement("h3");
+    auteur.textContent = nom.value;
+
+    //texte du commentaire
+    const texte = document.createElement("p");
+    texte.textContent = commentaire.value;
+
+    //bouton supprimer
+    const supprimer = document.createElement("button");
+    supprimer.textContent = "🗑️ Supprimer";
+    supprimer.classList.add("supprimer");
+    supprimer.addEventListener("click", function () {
+        carte.remove();
+    });
+
+    //ajout des éléments dans la carte 
+    carte.appendChild(auteur);
+    carte.appendChild(texte);
+    carte.appendChild(supprimer);
+
+    //ajout dans la liste des commentaires
+    listecommentaires.appendChild(carte);
+
+    //réinitialisation du formulaire
+    formulaire.reset();
 });
