@@ -76,13 +76,10 @@ form{
     gap: 12px;
 }
 
-<<<<<<< HEAD
-=======
 form p{
     opacity: .7;
 }
 
->>>>>>> beta-js
 input,
 textarea{
     padding: 10px 12px;
@@ -118,13 +115,10 @@ button:hover{
     border-radius: 10px;
 }
 
-<<<<<<< HEAD
-=======
 #error{
     display: none;
 }
 
->>>>>>> beta-js
 .delete{
     margin-top: 10px;
     background: #ffffff;
@@ -135,14 +129,11 @@ button:hover{
     cursor: pointer;
 }
 
-<<<<<<< HEAD
-=======
 .delete:hover{
     background: #dc2626;
     color: #ffffff;
 }
 
->>>>>>> beta-js
 @media(max-width:900px){
     .container{
         grid-template-columns: 1fr;
