@@ -1,5 +1,5 @@
 //sélcetion des éléments
-const formulaire = document.querySelector("#commentform");
+const formulaire = document.querySelector("#comment-form");
 const nom = document.querySelector("#nom");
 const commentaire = document.querySelector("#comment-zone");
 const erreur = document.querySelector("#error");
@@ -10,36 +10,40 @@ formulaire.addEventListener("submit", function (event) {
 
     event.preventDefault();
 
+    erreur.style.display = "none";
     erreur.textContent = "";
 
     //validation du nom
-    if (nom.ariaValueMax.trim().length < 2) {
+    if (nom.value.trim().length < 2) {
+        erreur.style.display = "block";
         erreur.textContent = "Le nom doit contenir au moins 2 caractères.";
         return;
     }
 
     //validation du commentaire
-    if (commentaire.ariaValueMax.trim().length < 10) {
-        erreur.textContent = "Le commentaire doit contenir au moins 10 caratères.";
+    if (commentaire.value.trim().length < 10) {
+        erreur.style.display = "block";
+        erreur.textContent = "Le commentaire doit contenir au moins 10 caractères.";
         return;
     }
 
     //création de la carte commentaire
     const carte = document.createElement("div");
-    carte.classlist.add("commentaire");
+    carte.classList.add("comment");
 
     //nom de l'auteur
     const auteur = document.createElement("h3");
-    auteur.textContent = nom.value;
+    auteur.textContent = nom.value.trim();
 
     //texte du commentaire
     const texte = document.createElement("p");
-    texte.textContent = commentaire.value;
+    texte.textContent = commentaire.value.trim();
 
     //bouton supprimer
     const supprimer = document.createElement("button");
     supprimer.textContent = "🗑️ Supprimer";
-    supprimer.classList.add("supprimer");
+    supprimer.classList.add("delete");
+
     supprimer.addEventListener("click", function () {
         carte.remove();
     });

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Le Carnet Gourmand</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/script.js"></script>
 </head>
 <body>
     <header>
@@ -14,8 +13,8 @@
     <main class="container">
         <section class="recipe">
             <div class="recipe-title">
-                <h1>Pâtes crèmeuse au citron</h1>
-                <p>Laisser votre avis sur cette rectte grâce au formulaire.</p>
+                <h1>Pâtes crèmeuses au citron</h1>
+                <p>Laisser votre avis sur cette recette grâce au formulaire.</p>
             </div>
             <div class="recipe-box">
                 <h1>Ingrédients</h1>
@@ -38,8 +37,10 @@
             <form id="comment-form">
                 <h2>Votre Nom</h2>
                 <input type="text" id="nom" placeholder="Ex: Léa">
+                <p>Minimum 2 caractères</p>
                 <h2>Votre commentaire</h2>
                 <textarea id="comment-zone" placeholder="Votre avis sur la recette..."></textarea>
+                <p>Minimum 10 caractères</p>
                 <button type="submit">Publier</button>
             </form>
             <p id="error"></p><!--la partie ou si le nom ou le commentaire n'est pas respecter ceci doit apparaitre-->
@@ -51,5 +52,6 @@
     <footer>
 
     </footer>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
